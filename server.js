@@ -25,7 +25,7 @@ app.use(express.static('public'));
 
 
 // database configuration with mongoose
-mongoose.connect('');
+mongoose.connect('mongodb://localhost/news-app');
 var db = mongoose.connection;
 var collections = ["scrapedData"];
 
