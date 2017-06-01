@@ -10,6 +10,10 @@ var logger = require("morgan");
 // initialize express
 var app = express();
 
+//port number 
+
+var port = process.env.PORT || 3000;
+
 // use morgan and bodyparser app
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({
@@ -142,6 +146,6 @@ app.post('/articles/:id', function(req, res) {
 });
 
 // listening on
-app.listen(3000, function() {
-    console.log("App running on port 3000!");
+app.listen(port, function() {
+    console.log("App running on port " + port);
 });
